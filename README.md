@@ -1,2 +1,22 @@
 # EnglishDepression
-Detecting Depression using English Audio Files (Daic Woz)
+- Detecting Depression using English Audio Files (Daic Woz)
+- (24.01.06) transcripts 전처리 필요
+- 파일 구성
+    - wavFiles 폴더
+        - 기존 음성 데이터를 발화 시간(초)에 따라 split한 wav 파일
+    - transcripts 폴더
+        - 음성 발화 시간에 따라 대사가 담긴 csv 파일
+    - newTranscipts 폴더
+        - 기존 transcripts csv파일을 전처리해둔 폴더
+    - 1. preprocessing.ipynb: wav파일 feature 추출 및 저장
+    - 2. modeling.ipynb: tensorflow==2.10.1 로 모델 학습 및 저장
+        - 학습 환경
+            - python==3.10
+            - tensorflow==2.10.1
+            - keras==2.10.0
+    - 3. predict.ipynb: cpu환경에서 모델 불러오기 및 새로운 데이터 예측 예시 노트북 파일
+        - 예측 환경
+            - python==3.10
+            - tensorflow-cpu==2.10.1
+            - keras==2.10.0
+    - utils.py: 함수 저장 파일
